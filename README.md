@@ -11,4 +11,5 @@ NOTE:Please refer to example.mgi.gmt.sh
 ### Disambiguate
 Docker or bash
 
+NOTE: The MGI -q long is a unstable queue now.
 
