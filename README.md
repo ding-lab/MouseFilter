@@ -13,7 +13,7 @@ NOTE:Please refer to example.mgi.gmt.sh
 
 The "run.lsf.disambiguate.v2.1.pl" is the testing version.
 The script can filter mouse reads of DNA- and RNA-seq NGS.
-Creating the script purpose is to test and create CWL script.
+Created the script purpose is to test and create CWL script.
 
 Docker or bash
 
