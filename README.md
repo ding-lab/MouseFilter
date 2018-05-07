@@ -15,7 +15,8 @@ The "run.lsf.disambiguate.v2.1.pl" is the testing version.
 The script can filter mouse reads of DNA- and RNA-seq NGS.
 Created the script purpose is to test and create CWL script.
 
-Docker or bash
+
+Dockers (https://github.com/ding-lab/dockers)
 
 NOTE: The MGI -q long is a unstable queue now.
 
