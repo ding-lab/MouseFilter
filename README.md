@@ -11,13 +11,13 @@ NOTE:Please refer to example.mgi.gmt.sh
 
 ### Disambiguate
 
+* For running mouse filtering in research-hpc, please use "createBash.disambiguate.v2.pl".
+
 * The "run.lsf.disambiguate.v2.1.pl" is the testing version.
 The script can filter mouse reads of DNA- and RNA-seq NGS.
 Created the script purpose is to test and create CWL script.
 
-* NOTE: The MGI -q long is a unstable queue now.
-
-* For running mouse filtering in research-hpc, please use "createBash.disambiguate.v2.pl".
+     NOTE: The MGI -q long is a unstable queue now.
 
 * Dockers (https://github.com/ding-lab/dockers)
     * Only Disambiguate
