@@ -21,9 +21,10 @@ Created the script purpose is to test and create CWL script.
 
 * Dockers (https://github.com/ding-lab/dockers)
     * Only Disambiguate
+    ```
     docker pull hsun9/disambiguate
     docker run hsun9/disambiguate ngs_disambiguate --help
-    
+    ```
     * Full pipeline of WXS docker image
     docker pull hsun9/disambiguateplus
 
