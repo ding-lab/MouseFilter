@@ -34,13 +34,14 @@ Created the script purpose is to test and create CWL script.
 NOTE : The pipeline tested in MGI cluster. 
 
 
-I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
-Successful example:  https://github.com/ding-lab/MouseFilter/blob/master/example.mgi.gmt.sh
+#### I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
+[Successful example](https://github.com/ding-lab/MouseFilter/blob/master/example.mgi.gmt.sh)
 
+```
 name="example"                   #-- any name
-outDir=/example/outFolder   #-- any dir
-bed=/example/target.bed      #-- any bed file
-hg19=/path/GRCh37-lite.fa            #-- GRCh37
+outDir=/example/outFolder        #-- any dir
+bed=/example/target.bed          #-- any bed file
+hg19=/path/GRCh37-lite.fa        #-- GRCh37
 mm10=/path/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa
 chain10=/path/hg19ToMm10.over.chain
 
@@ -55,11 +56,12 @@ gmt somatic filter-mouse-bases --chain-file=$chain10 \
 
 ## chain download 
 http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
+```
 
+#### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
+[The perl code for using research-hpc](https://github.com/ding-lab/MouseFilter/blob/master/createBash.disambiguate.v2.pl)
 
-II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
-The perl code for using research-hpc: https://github.com/ding-lab/MouseFilter/blob/master/createBash.disambiguate.v2.pl
-
+```
 Mouse reads filter from DNA-seq based data (WGS/WXS)
     # Func. Filter mouse reads and create sorted bam for running somatic calling using pair-end fastq
     # check created bash file
@@ -98,3 +100,4 @@ Disambiguate
 STAR                  # RNA-seq mapping
     
 NOTE: Before running perl script, the reference and software directory should change.
+```
