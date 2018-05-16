@@ -80,29 +80,30 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
      # submit job to research-hpc
      perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star -t rna -run
      ```
-```
-Role of folder:
-    e.g.  
+    
+    ```
+     # Role of folder
+      e.g.  
           /data/240_wxs/240_wxs_1.fastq.gz
           /data/240_wxs/240_wxs_1.fastq.gz
           /data/240_wxs/240_wxs.bam
 
-FolderList
+     # FolderList
      e.g.
           /data/240_wxs
           /data/241_wxs
 
-Download reference:
-    GRCh37 (or GRCh38) and GRCm38 from Ensembl
-    For RNA-seq filter, GTF file must download
+     # Download reference:
+     GRCh37 (or GRCh38) and GRCm38 from Ensembl
+     For RNA-seq filter, GTF file must download
 
-Install software:
-Java (JRE1.8.x)  # for running in MGI server
-Picard
-BWA                    # DNA-seq mapping
-Samtools
-Disambiguate
-STAR                  # RNA-seq mapping
+     # Install software:
+     Java (JRE1.8.x)   # for running in MGI server
+     Picard
+     BWA               # DNA-seq mapping
+     Samtools
+     Disambiguate
+     STAR              # RNA-seq mapping
     
-NOTE: Before running perl script, the reference and software directory should change.
-```
+     NOTE: Before running perl script, the reference and software directory should change.
+     ```
