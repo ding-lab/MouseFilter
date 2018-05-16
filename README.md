@@ -61,21 +61,26 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
 #### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
 [The perl code for using research-hpc](https://github.com/ding-lab/MouseFilter/blob/master/createBash.disambiguate.v2.pl)
 
-```
-Mouse reads filter from DNA-seq based data (WGS/WXS)
+
+* Mouse reads filter from DNA-seq based data (WGS/WXS)
+    ```
     # Func. Filter mouse reads and create sorted bam for running somatic calling using pair-end fastq
     # check created bash file
     perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a bwa -t dna
+    
     # submit job to research-hpc
     perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a bwa -t dna -run
-
-Mouse reads filter from RNA-seq based data
-    # Func. Filter mouse reads and create new fastq using pair-end fastq 
-    # check created bash file
-    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star
-    # submit job to research-hpc
-    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star -t rna -run
-
+     ```
+* Mouse reads filter from RNA-seq based data
+     ```
+     # Func. Filter mouse reads and create new fastq using pair-end fastq 
+     # check created bash file
+     perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star
+     
+     # submit job to research-hpc
+     perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star -t rna -run
+     ```
+```
 Role of folder:
     e.g.  
           /data/240_wxs/240_wxs_1.fastq.gz
