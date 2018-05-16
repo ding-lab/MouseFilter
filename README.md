@@ -29,4 +29,72 @@ Created the script purpose is to test and create CWL script.
     
           docker pull hsun9/disambiguateplus
 
+-------------------------------------------------------------------
 
+NOTE : The pipeline tested in MGI cluster. 
+
+
+I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
+Successful example:  https://github.com/ding-lab/MouseFilter/blob/master/example.mgi.gmt.sh
+
+name="example"                   #-- any name
+outDir=/example/outFolder   #-- any dir
+bed=/example/target.bed      #-- any bed file
+hg19=/path/GRCh37-lite.fa            #-- GRCh37
+mm10=/path/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa
+chain10=/path/hg19ToMm10.over.chain
+
+gmt somatic filter-mouse-bases --chain-file=$chain10 \
+    --human-reference=$hg19 \
+    --mouse-reference=$mm10 --variant-file=$bed \
+    --filtered-file=$outDir/log/$name.mouse.hg19toMm10.out \
+    --output-file=$outDir/$name.hg19toMm10.permissive.out --permissive
+
+## target.bed (create based on VCF)
+1 121009 121009 C T
+
+## chain download 
+http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
+
+
+II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
+The perl code for using research-hpc: https://github.com/ding-lab/MouseFilter/blob/master/createBash.disambiguate.v2.pl
+
+Mouse reads filter from DNA-seq based data (WGS/WXS)
+    # Func. Filter mouse reads and create sorted bam for running somatic calling using pair-end fastq
+    # check created bash file
+    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a bwa -t dna
+    # submit job to research-hpc
+    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a bwa -t dna -run
+
+Mouse reads filter from RNA-seq based data
+    # Func. Filter mouse reads and create new fastq using pair-end fastq 
+    # check created bash file
+    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star
+    # submit job to research-hpc
+    perl createBash.disambiguate.v2.pl -f folderList -p fq2disam -a star -t rna -run
+
+Role of folder:
+    e.g.  
+          /data/240_wxs/240_wxs_1.fastq.gz
+          /data/240_wxs/240_wxs_1.fastq.gz
+          /data/240_wxs/240_wxs.bam
+
+FolderList
+     e.g.
+          /data/240_wxs
+          /data/241_wxs
+
+Download reference:
+    GRCh37 (or GRCh38) and GRCm38 from Ensembl
+    For RNA-seq filter, GTF file must download
+
+Install software:
+Java (JRE1.8.x)  # for running in MGI server
+Picard
+BWA                    # DNA-seq mapping
+Samtools
+Disambiguate
+STAR                  # RNA-seq mapping
+    
+NOTE: Before running perl script, the reference and software directory should change.
