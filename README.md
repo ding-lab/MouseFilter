@@ -6,8 +6,8 @@
      
 * __OUTPUT__
 
-     WXS/WGS: output human *.bam & *.bai files, which filtered mouse reads, sorted and removed duplicated reads one.
-     RNA-seq: output human *.fq.gz, which filtered mouse reads one.
+     WXS/WGS: output human *.bam & *.bai files, which filtered mouse reads, sorted and removed duplicated reads files.
+     RNA-seq: output human *.fq.gz, which filtered mouse reads files.
 
 
 
@@ -17,7 +17,16 @@
 * Usage
      
      ```
-     
+      * Only Disambiguate
+   
+          docker pull hsun9/disambiguate
+          docker run hsun9/disambiguate ngs_disambiguate --help
+
+
+      * Full pipeline of mouse filter (wxs data) docker image
+
+          docker pull hsun9/disambiguateplus
+          docker run hsun9/disambiguateplus ngs_disambiguate --help
      ```
 
 -------------------------------------------------------------------
@@ -49,16 +58,6 @@ The script can filter mouse reads of DNA- and RNA-seq NGS.
 Created the script purpose is to test and create CWL script.
 
      NOTE: The MGI -q long is a unstable queue now.
-
-* Dockers (https://github.com/ding-lab/dockers)
-    * Only Disambiguate
-   
-          docker pull hsun9/disambiguate
-          docker run hsun9/disambiguate ngs_disambiguate --help
-    
-    * Full pipeline of mouse filter (wxs data) docker image
-    
-          docker pull hsun9/disambiguateplus
 
 -------------------------------------------------------------------
 
