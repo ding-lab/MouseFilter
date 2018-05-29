@@ -50,32 +50,16 @@ The CWL version mainly developed by Matthew Wyczalkowski
 
 ## MouseFilter: MGI-server version
 
-### GMT Filter-mouse-bases
+NOTE : The pipeline tested in MGI cluster. 
+
+#### I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
 ```
-NOTE:Please refer to example.mgi.gmt.sh
+NOTE:Please refer to "example.mgi.gmt.sh"
      If test the example.mgi.gmt.sh, you must modify the vars including name, outDir and bed.
      The shell script only run in MGI servers.
      
      The *.permissive.out is the final filtered result.
 ```
-
-### Disambiguate
-
-* For running mouse filtering in research-hpc, please use "createBash.disambiguate.v2.pl".
-
-* The "run.lsf.disambiguate.v2.1.pl" is the testing version.
-The script can filter mouse reads of DNA- and RNA-seq NGS.
-Created the script purpose is to test and create CWL script.
-
-     NOTE: The MGI -q long is a unstable queue now.
-
--------------------------------------------------------------------
-
-NOTE : The pipeline tested in MGI cluster. 
-
-
-### I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
-[Successful example](https://github.com/ding-lab/MouseFilter/blob/master/example.mgi.gmt.sh)
 
 ```
 name="example"                   #-- any name
@@ -98,8 +82,16 @@ gmt somatic filter-mouse-bases --chain-file=$chain10 \
 http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
 ```
 
-### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
-[The perl code for using research-hpc](https://github.com/ding-lab/MouseFilter/blob/master/createBash.disambiguate.v2.pl)
+
+
+#### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
+* For running mouse filtering in research-hpc, please use "createBash.disambiguate.v2.pl".
+
+* The "run.lsf.disambiguate.v2.1.pl" is the testing version.
+The script can filter mouse reads of DNA- and RNA-seq NGS.
+Created the script purpose is to test and create CWL script.
+
+     NOTE: The MGI -q long is a unstable queue now.
 
 
 * __Mouse reads filter from DNA-seq based data (WGS/WXS)__
