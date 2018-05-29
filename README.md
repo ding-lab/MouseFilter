@@ -2,7 +2,7 @@
 ## Description
 * __INPUT__ 
      
-     bam or fq.gz
+     *.bam or *.fq.gz (pair-end reads)
      
 * __OUTPUT__
 
