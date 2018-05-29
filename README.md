@@ -1,4 +1,12 @@
 
+## Description
+* Input 
+     bam or fq.gz
+* Output
+     WXS/WGS: output human *.bam & *.bai files, which filtered mouse reads, sorted and removed duplicated reads one.
+     RNA-seq: output human *.fq.gz, which filtered mouse reads one.
+
+
 
 ## MouseFilter: Docker version
 
