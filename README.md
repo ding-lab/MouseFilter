@@ -52,7 +52,7 @@ The CWL version mainly developed by Matthew Wyczalkowski
 
 NOTE : The pipeline tested in MGI cluster. 
 
-#### I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
+### I) VCF/BED file based mouse filtering (gmt somatic filter-mouse-bases):
 ```
 NOTE:Please refer to "example.mgi.gmt.sh"
      If test the example.mgi.gmt.sh, you must modify the vars including name, outDir and bed.
@@ -84,7 +84,7 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
 
 
 
-#### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
+### II) FASTQ/BAM based mouse reads filtering (Disambiguate tool):
 * For running mouse filtering in research-hpc, please use "createBash.disambiguate.v2.pl".
 
 * The "run.lsf.disambiguate.v2.1.pl" is the testing version.
