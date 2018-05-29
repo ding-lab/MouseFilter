@@ -2,8 +2,8 @@
 
 ## MouseFilter: Docker version
 
-* Docker files https://github.com/ding-lab/dockers
-* Command line
+* Docker files (https://github.com/ding-lab/dockers)
+* Usage
      
      ```
      
