@@ -2,6 +2,15 @@
 
 ## MouseFilter: Docker version
 
+* Docker files https://github.com/ding-lab/dockers
+
+
+
+## MouseFilter: CWL version
+
+     The CWL version mainly developed by Matthew Wyczalkowski
+     https://github.com/ding-lab/MouseTrap2
+     
 
 
 ## MouseFilter: MGI-server version
@@ -115,10 +124,5 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
      conda install -c bioconda star=2.5.4a
 
 
-## MouseFilter: CWL version
-
-     The CWL version mainly developed by Matthew Wyczalkowski
-     https://github.com/ding-lab/MouseTrap2
-     
      
      
