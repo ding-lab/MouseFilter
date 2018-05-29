@@ -1,8 +1,11 @@
 
 ## Description
-* Input 
+* __Input__ 
+     
      bam or fq.gz
-* Output
+     
+* __Output__
+
      WXS/WGS: output human *.bam & *.bai files, which filtered mouse reads, sorted and removed duplicated reads one.
      RNA-seq: output human *.fq.gz, which filtered mouse reads one.
 
