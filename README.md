@@ -1,4 +1,6 @@
-## MouseFilter
+
+
+## MouseFilter: MGI-server version
 
 ### GMT Filter-mouse-bases
 ```
@@ -108,3 +110,11 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
      conda install -c bioconda ngs-disambiguate=2016.11.10
      conda install -c bioconda star=2.5.4a
 
+
+## MouseFilter: CWL version
+
+     The CWL version mainly developed by Matthew Wyczalkowski
+     https://github.com/ding-lab/MouseTrap2
+     
+     
+     
