@@ -33,7 +33,7 @@
           docker run hsun9/disambiguate ngs_disambiguate --help
 
 
-      * Full pipeline of mouse filter (wxs data) docker image
+      * Full pipeline of mouse filter (wxs/wgs data) docker image
 
           docker pull hsun9/disambiguateplus
           docker run hsun9/disambiguateplus ngs_disambiguate --help
