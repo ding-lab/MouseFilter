@@ -9,13 +9,14 @@
      
      ```
 
+-------------------------------------------------------------------
 
 ## MouseFilter: CWL version
 
-     The CWL version mainly developed by Matthew Wyczalkowski
-     https://github.com/ding-lab/MouseTrap2
+The CWL version mainly developed by Matthew Wyczalkowski
+https://github.com/ding-lab/MouseTrap2
      
-
+-------------------------------------------------------------------
 
 ## MouseFilter: MGI-server version
 
