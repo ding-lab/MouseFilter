@@ -10,6 +10,16 @@
      RNA-seq: output human *.fq.gz, which filtered mouse reads files.
 
 
+## Install software
+     Java (JRE1.8.x)   # for running in MGI server
+     conda install -c bioconda bwa=0.7.15
+     conda install -c bioconda samtools=1.5
+     conda install -c bioconda picard=2.17.11
+     conda install -c bioconda bamtools=2.4.0
+     conda install -c bioconda ngs-disambiguate=2016.11.10
+     conda install -c bioconda star=2.5.4a
+
+-------------------------------------------------------------------
 
 ## MouseFilter: Docker version
 
@@ -129,14 +139,6 @@ http://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/hg19ToMm10.over.chain.gz
     
      NOTE: Before running perl script, the reference and software directory should change.
      ```
-#### Install software
-     Java (JRE1.8.x)   # for running in MGI server
-     conda install -c bioconda bwa=0.7.15
-     conda install -c bioconda samtools=1.5
-     conda install -c bioconda picard=2.17.11
-     conda install -c bioconda bamtools=2.4.0
-     conda install -c bioconda ngs-disambiguate=2016.11.10
-     conda install -c bioconda star=2.5.4a
 
 
      
