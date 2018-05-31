@@ -10,6 +10,9 @@
      RNA-seq: output human *.fq.gz, which filtered mouse reads files.
 
 
+## Workflow
+![](doc/workflow.png)
+
 ## Install software
    * Java (JRE1.8.x)   # for running in MGI server
    * conda install -c bioconda bwa=0.7.15
